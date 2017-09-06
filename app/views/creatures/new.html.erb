@@ -1,2 +1,7 @@
-<h1>Creatures#new</h1>
-<p>Find me in app/views/creatures/new.html.erb</p>
+<h1>New Creature</h1>
+<hr />
+<%= render "partials/creature_form", creature: @creature%>
+<hr />
+<%= link_to creatures_path do%>
+    <div><button>Back Home</button></div>
+<%end%>

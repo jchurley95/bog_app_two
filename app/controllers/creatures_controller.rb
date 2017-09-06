@@ -25,7 +25,7 @@ class CreaturesController < ApplicationController
   end
 
   def update
-    @creature = Creature.find params [:id]
+    @creature = Creature.find params[:id]
 
     if @creature.update(creature_params)
       redirect_to creature_path(@creature)
@@ -36,7 +36,7 @@ class CreaturesController < ApplicationController
   end
 
   def destroy
-    @creature = Creature.find params [:id]
+    @creature = Creature.find params[:id]
     @creature.destroy
     redirect_to creatures_path
     

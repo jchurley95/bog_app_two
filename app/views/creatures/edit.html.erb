@@ -1,2 +1,11 @@
-<h1>Creatures#edit</h1>
-<p>Find me in app/views/creatures/edit.html.erb</p>
+<h1>Edit <%=@creature.name%></h1>
+<hr />
+<%= render "partials/creature_form", creature: @creature%>
+<br />
+<%=link_to creature_path(@creature.id), method: :delete, data: {confirm: "Are you sure?"}  do%> 
+<div><button>Delete <%= @creature.name %></button></div>
+<%end%>
+<hr />
+<%= link_to creatures_path do%>
+    <div><button>Back Home</button></div>
+<%end%>
